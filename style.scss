@@ -4,6 +4,7 @@ $v-light-red: #ff7a85;
 $v-dark-blue: #1f3f5b;
 
 // Neutral Colors
+
 $white: #fff;
 // footer text
 $grayish-blue: #c8c8cb;
@@ -20,7 +21,7 @@ $light-red: #ff3d54;
 $vd-gray-blue: #2c2d3f;
 $vd-desaturated-blue: #3f4164;
 
-
+// Reset rules
 *, *::before,*::after {
     box-sizing: border-box;
     padding: 0;
@@ -28,12 +29,5 @@ $vd-desaturated-blue: #3f4164;
 }
 
 body {
-    border: 1px solid $vd-black-blue;
     font-size: 1rem;
-}
-
-
-header {
-    width: 200px;
-    background-color: $light-red;
 }
