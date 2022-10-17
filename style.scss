@@ -1,0 +1,39 @@
+// Primary Colors
+$light-red: #ff525d;
+$v-light-red: #ff7a85;
+$v-dark-blue: #1f3f5b;
+
+// Neutral Colors
+$white: #fff;
+// footer text
+$grayish-blue: #c8c8cb;
+$vd-grayish-blue: #4b5862;
+$vd-black-blue: #25252d;
+
+// Background gradient - Intro/CTA mobile nav
+
+$v-light-red: #ff8f70;
+$light-red: #ff3d54;
+
+// Background gradient - body:
+
+$vd-gray-blue: #2c2d3f;
+$vd-desaturated-blue: #3f4164;
+
+
+*, *::before,*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    border: 1px solid $vd-black-blue;
+    font-size: 1rem;
+}
+
+
+header {
+    width: 200px;
+    background-color: $light-red;
+}
