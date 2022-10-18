@@ -26,8 +26,187 @@ $vd-desaturated-blue: #3f4164;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 
-body {
-    font-size: 1rem;
+body {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
 }
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    font-family: 'Overpass', sans-serif;
+    border: 1px solid white;
+    max-width: 375px;
+
+    .navbar {
+        margin-top: 1.55rem;       
+        display: flex;
+        justify-content: space-between;       
+
+        .content {           
+            display: flex;
+
+            .items {
+                display: none;
+                color: $white;
+            }
+        }
+
+        .authentication {
+            display: none;
+        }
+
+
+    }   
+
+    button {
+        cursor: pointer;
+        background: none;
+        outline: none;
+        border: none;
+    }
+}
+
+.header {
+    padding: 1rem 2rem;
+    border-radius: 0 0 0 100px;
+    background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center , linear-gradient($v-light-red, $light-red);    
+
+    .title {
+        margin-top: 8rem;
+        text-align: center;
+        color: $white;
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: $grayish-blue;
+        }
+
+        .button-area {
+            margin-top: 3rem;
+            margin-bottom: 6.5rem;            
+
+            .start-free {
+                margin-right: 1rem;                        
+                background-color: $white;
+                color: $light-red;
+                border-radius: 2rem;
+                padding: 1rem 1.3rem;
+            }
+
+            .start-free:hover {
+                background-color: transparent;
+                color: $white;
+                outline: 1px solid $white;
+                transition: ease-out 0.3s;
+            }
+    
+            .learn-more {
+                background-color: transparent;
+                outline: 1px solid $white;
+                color: $white;
+                border-radius: 2rem;
+                padding: 1rem 1.3rem;
+            }
+
+            .learn-more:hover {
+                background-color: $white;
+                color: $light-red;
+                transition: ease-out 0.3s;
+                outline: none;
+            }
+        }
+       
+    }
+
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    
+    .normal {
+        margin-top: 3.6rem;
+
+        h2 {
+            padding-top: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color:$v-dark-blue;
+        }
+
+        p {
+            color: $vd-grayish-blue;
+            text-align: center;
+            line-height: 1.75rem;
+            font-family: 'Ubuntu', sans-serif;            
+        }
+
+        img {
+            margin-top: 1rem;
+        }
+    }
+
+    .abnormal {
+        position: relative;
+        background: url(/images/bg-pattern-circles.svg) no-repeat, linear-gradient($vd-gray-blue, $vd-desaturated-blue);
+        background-position-x: 50%;
+        background-position-y: -500%;
+        background-size: 150%;
+        padding: 10rem 1rem 6rem 1rem;
+        border-radius: 0 3rem 0 3rem;
+        margin-top: 18rem;        
+
+        .phones {
+            position: absolute;  
+            bottom: 50%; 
+            left: -2%;
+            width: 350px;
+            height: 475px;
+            background: url(./images/illustration-phones.svg) no-repeat;
+            background-position-x: 50%;
+            background-position-y: 0;
+            background-size: 100%;
+        }
+
+        h2 {
+            color: $white;
+        }
+
+        p {
+            color:$white;            
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    
+}
+

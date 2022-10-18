@@ -6,6 +6,205 @@
 }
 
 body {
-  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  font-family: 'Overpass', sans-serif;
+  border: 1px solid white;
+  max-width: 375px;
+}
+
+.container .navbar {
+  margin-top: 1.55rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .navbar .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .navbar .content .items {
+  display: none;
+  color: #fff;
+}
+
+.container .navbar .authentication {
+  display: none;
+}
+
+.container button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.header {
+  padding: 1rem 2rem;
+  border-radius: 0 0 0 100px;
+  background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, linear-gradient(#ff8f70, #ff3d54);
+}
+
+.header .title {
+  margin-top: 8rem;
+  text-align: center;
+  color: #fff;
+}
+
+.header .title h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.header .title p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #c8c8cb;
+}
+
+.header .title .button-area {
+  margin-top: 3rem;
+  margin-bottom: 6.5rem;
+}
+
+.header .title .button-area .start-free {
+  margin-right: 1rem;
+  background-color: #fff;
+  color: #ff3d54;
+  border-radius: 2rem;
+  padding: 1rem 1.3rem;
+}
+
+.header .title .button-area .start-free:hover {
+  background-color: transparent;
+  color: #fff;
+  outline: 1px solid #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+
+.header .title .button-area .learn-more {
+  background-color: transparent;
+  outline: 1px solid #fff;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 1rem 1.3rem;
+}
+
+.header .title .button-area .learn-more:hover {
+  background-color: #fff;
+  color: #ff3d54;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  outline: none;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.25rem;
+}
+
+.main-content .normal {
+  margin-top: 3.6rem;
+}
+
+.main-content .normal h2 {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1f3f5b;
+}
+
+.main-content .normal p {
+  color: #4b5862;
+  text-align: center;
+  line-height: 1.75rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.main-content .normal img {
+  margin-top: 1rem;
+}
+
+.main-content .abnormal {
+  position: relative;
+  background: url(/images/bg-pattern-circles.svg) no-repeat, -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+  background: url(/images/bg-pattern-circles.svg) no-repeat, linear-gradient(#2c2d3f, #3f4164);
+  background-position-x: 50%;
+  background-position-y: -500%;
+  background-size: 150%;
+  padding: 10rem 1rem 6rem 1rem;
+  border-radius: 0 3rem 0 3rem;
+  margin-top: 18rem;
+}
+
+.main-content .abnormal .phones {
+  position: absolute;
+  bottom: 50%;
+  left: -2%;
+  width: 350px;
+  height: 475px;
+  background: url(./images/illustration-phones.svg) no-repeat;
+  background-position-x: 50%;
+  background-position-y: 0;
+  background-size: 100%;
+}
+
+.main-content .abnormal h2 {
+  color: #fff;
+}
+
+.main-content .abnormal p {
+  color: #fff;
+}
+
+.main-content .abnormal img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
