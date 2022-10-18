@@ -33,7 +33,7 @@ a {
 .container {
   font-family: 'Overpass', sans-serif;
   border: 1px solid white;
-  max-width: 375px;
+  max-width: 23.438rem;
 }
 
 .container .navbar {
@@ -70,7 +70,7 @@ a {
 
 .header {
   padding: 1rem 2rem;
-  border-radius: 0 0 0 100px;
+  border-radius: 0 0 0 6.25rem;
   background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, linear-gradient(#ff8f70, #ff3d54);
 }
@@ -188,8 +188,8 @@ a {
   position: absolute;
   bottom: 50%;
   left: -2%;
-  width: 350px;
-  height: 475px;
+  width: 21.875rem;
+  height: 29.688rem;
   background: url(./images/illustration-phones.svg) no-repeat;
   background-position-x: 50%;
   background-position-y: 0;
