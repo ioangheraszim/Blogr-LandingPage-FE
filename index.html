@@ -15,17 +15,41 @@
 <body>
   <header class="container header">
     <nav class="navbar">
-      <img src="./images/logo.svg" alt="" class="logo">      
-      <ul class="content">
-        <li></li>
-        <li class="items">Product <img src="./images/icon-arrow-light.svg" alt=""></li>
-        <li class="items">Company <img src="./images/icon-arrow-light.svg" alt=""></li>
-        <li class="items">Connect <img src="./images/icon-arrow-light.svg" alt=""></li>
+      <div class="logo">
+        <a href="#"><img src="./images/logo.svg" alt="Blogr Logo" ></a>     
+      </div> 
+      <ul class="content">        
+        <li class="items">
+         <a class="main-menu" href="#">Product<img class="arrow-icon" src="./images/icon-arrow-dark.svg" alt="arrow icon"></a>
+         <ul class="sub-menu a-menu">
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Ingegrations</a></li>
+         </ul>
+        </li>
+        <li class="items"><a class="main-menu" href="#">Company<img class="arrow-icon" src="./images/icon-arrow-dark.svg" alt="arrow icon"></a>
+          <ul class="sub-menu b-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </li>
+        <li class="items"><a class="main-menu" href="#">Connect<img class="arrow-icon" src="./images/icon-arrow-dark.svg" alt="arrow icon"></a>
+          <ul class="sub-menu c-menu">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </li>
+        <ul class="authentication">
+          <li class="login"><a href="#">Login</a></li>
+          <li class="sign-up"><a href="#">Sign Up</a></li>        
+        </ul>
       </ul>
-      <ul class="authentication">
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign Up</a></li>        
-      </ul>
+      
       <button><img src="./images/icon-hamburger.svg" alt=""></button>
     </nav>
     <div class="title">
@@ -73,8 +97,39 @@
     </section> 
   </main>
 
-  <footer>
-
+  <footer class="container footer-content">
+    <div class="logo">
+      <a href="#"><img src="./images/logo.svg" alt="Blogr Logo" ></a>     
+    </div> 
+    <ul class="footer-list">        
+      <li class="items">
+       <a class="main-menu" href="#">Product</a>
+       <ul class="sub-menu a-menu">
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Ingegrations</a></li>
+       </ul>
+      </li>
+      <li class="items"><a class="main-menu" href="#">Company</a>
+        <ul class="sub-menu b-menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </li>
+      <li class="items"><a class="main-menu" href="#">Connect</a>
+        <ul class="sub-menu c-menu">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </li>     
+    </ul>
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>

@@ -34,7 +34,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 
 ul {
@@ -47,27 +46,129 @@ a {
 
 .container {
     font-family: 'Overpass', sans-serif;
-    border: 1px solid white;
     max-width: 23.438rem;
 
     .navbar {
         margin-top: 1.55rem;       
         display: flex;
-        justify-content: space-between;       
+        justify-content: space-between;
+        position: relative;
 
-        .content {           
-            display: flex;
+        .content {            
+            position: absolute;
+            margin-top: 2.5rem;
+            top: 50%;
 
+           
+            width: 19.688rem;
+            background-color: $white; 
+
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+            .arrow-icon {
+                margin-left: .5rem;
+            }
+            
             .items {
-                display: none;
+                
+                margin-top: 2rem;
+
+                .main-menu {                    
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: $vd-black-blue;
+                }
+
+                .sub-menu {        
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-top: 1.2rem;
+
+                    li {
+                        margin-top: 1rem;
+                    }
+
+                    a {
+                        color: $vd-grayish-blue;
+                        font-weight: 600;
+                        opacity: .8;
+                    }
+
+                    a:hover {
+                        transition: ease-in-out 300ms;
+                        font-weight: 600;
+                    }
+                  
+                }
+
+                .a-menu {
+                    display: none;
+                }
+
+                .b-menu {
+                    display: none;
+                }
+
+                .c-menu {
+                    display: none;                    
+                }
                 color: $white;
+                
+            }
+
+            .authentication {                
+                margin-top: 2.5rem; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;  
+
+                font-size: 1.1rem;
+                font-weight: 600;
+
+                a {                                        
+                    padding: 1rem;
+                    color: $vd-black-blue;
+                }
+
+                .login {
+                    padding: .8rem;
+                    border-radius: 1.25rem;
+                }
+
+                .login:hover {
+                    a {
+                        color: $white;
+                    }
+
+                    background: linear-gradient($v-light-red, $light-red);
+                }
+
+                .sign-up {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                    border-radius: 1.25rem;
+                    padding: .8rem;
+                }
+
+                .sign-up:hover {
+                    a {
+                        color: $white;
+                    }
+
+                    background: linear-gradient($v-light-red, $light-red);
+                    
+                }
+               
             }
         }
-
-        .authentication {
-            display: none;
-        }
-
 
     }   
 
@@ -209,5 +310,49 @@ a {
     
 }
 
+.footer-content {
+    margin-top: 3.85rem;
+    width: 23.438rem;
+    background-color: $vd-black-blue;
+    border-radius: 0 6.25rem 0 0;
 
+    .logo {
+        text-align: center;
+        margin: 4rem;
+    }
+    
+    .footer-list {
+
+        text-align: center;
+        .items {
+
+            margin: 1.5rem 0;
+
+           
+            .main-menu {
+                color: $white;
+                font-weight: 600;
+            }
+
+            .sub-menu {
+
+                margin-top: 3rem;
+                
+                li {
+                    margin-top: .5rem;
+
+                    a{
+                        color: $white;
+                        opacity: .8;
+                    }  
+                    
+                    a:hover {
+                        opacity: 1;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
 

@@ -19,7 +19,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid black;
 }
 
 ul {
@@ -32,7 +31,6 @@ a {
 
 .container {
   font-family: 'Overpass', sans-serif;
-  border: 1px solid white;
   max-width: 23.438rem;
 }
 
@@ -44,21 +42,142 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 .container .navbar .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  margin-top: 2.5rem;
+  top: 50%;
+  width: 19.688rem;
+  background-color: #fff;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+.container .navbar .content .arrow-icon {
+  margin-left: .5rem;
 }
 
 .container .navbar .content .items {
-  display: none;
+  margin-top: 2rem;
   color: #fff;
 }
 
-.container .navbar .authentication {
+.container .navbar .content .items .main-menu {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #25252d;
+}
+
+.container .navbar .content .items .sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1.2rem;
+}
+
+.container .navbar .content .items .sub-menu li {
+  margin-top: 1rem;
+}
+
+.container .navbar .content .items .sub-menu a {
+  color: #4b5862;
+  font-weight: 600;
+  opacity: .8;
+}
+
+.container .navbar .content .items .sub-menu a:hover {
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+  font-weight: 600;
+}
+
+.container .navbar .content .items .a-menu {
   display: none;
+}
+
+.container .navbar .content .items .b-menu {
+  display: none;
+}
+
+.container .navbar .content .items .c-menu {
+  display: none;
+}
+
+.container .navbar .content .authentication {
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.container .navbar .content .authentication a {
+  padding: 1rem;
+  color: #25252d;
+}
+
+.container .navbar .content .authentication .login {
+  padding: .8rem;
+  border-radius: 1.25rem;
+}
+
+.container .navbar .content .authentication .login:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(#ff8f70, #ff3d54);
+}
+
+.container .navbar .content .authentication .login:hover a {
+  color: #fff;
+}
+
+.container .navbar .content .authentication .sign-up {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-radius: 1.25rem;
+  padding: .8rem;
+}
+
+.container .navbar .content .authentication .sign-up:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(#ff8f70, #ff3d54);
+}
+
+.container .navbar .content .authentication .sign-up:hover a {
+  color: #fff;
 }
 
 .container button {
@@ -206,5 +325,47 @@ a {
 
 .main-content .abnormal img {
   width: 100%;
+}
+
+.footer-content {
+  margin-top: 3.85rem;
+  width: 23.438rem;
+  background-color: #25252d;
+  border-radius: 0 6.25rem 0 0;
+}
+
+.footer-content .logo {
+  text-align: center;
+  margin: 4rem;
+}
+
+.footer-content .footer-list {
+  text-align: center;
+}
+
+.footer-content .footer-list .items {
+  margin: 1.5rem 0;
+}
+
+.footer-content .footer-list .items .main-menu {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-content .footer-list .items .sub-menu {
+  margin-top: 3rem;
+}
+
+.footer-content .footer-list .items .sub-menu li {
+  margin-top: .5rem;
+}
+
+.footer-content .footer-list .items .sub-menu li a {
+  color: #fff;
+  opacity: .8;
+}
+
+.footer-content .footer-list .items .sub-menu li a:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
