@@ -229,14 +229,24 @@ a {
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 1.25rem;
     
     .normal {
         margin-top: 3.6rem;
+
+        .first-section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color:$v-dark-blue;
+            margin-bottom: 6rem;
+        }
+       
+        .left-info {
+            div {
+                margin-bottom: 5rem;
+            }
+        }
 
         h2 {
             padding-top: 1rem;
@@ -306,6 +316,8 @@ a {
 
     border-radius: 0  6.25rem 0 0;
 
+    margin-top: 10rem;
+
     .logo {
         margin: 3rem 0 0 0;
     }
@@ -336,7 +348,7 @@ a {
 }
 
 // Desktop responsivity
-@media (min-width:940px) {
+@media (min-width:1045px) {
     .container {
         margin: 0 auto;
         max-width: 90rem;
@@ -435,6 +447,56 @@ a {
             width: 100%;
         }
 
+    }
+
+    .main-content {
+        .top-pub {
+            position: relative;
+           
+            .left-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                max-width: 520px;
+
+                h2 {
+                    padding: 0;
+                    margin-bottom: 2rem;
+                    text-align: left;                    
+                }
+
+                p{
+                    text-align: left;
+                }
+                
+            }
+
+            .editor-image {
+                background: url(./images/illustration-editor-desktop.svg) no-repeat center center/cover;
+                position: absolute;
+                top: -200px;
+                right: -350px;
+                width: 900px;
+                height: 900px;
+            }
+        }
+
+        .abnormal {
+            background-position-x: -150%;
+            background-position-y: 90%;
+            background-size: 90%;
+
+            .phones {
+                border: 1px solid green;
+                background-position-x: 30px;
+                background-position-y: 4px;
+                background-size: 100%;
+                width: 550px;
+                height: 500px;
+            }
+        }
+
+       
     }
 
     .footer-content {
