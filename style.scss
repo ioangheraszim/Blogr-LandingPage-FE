@@ -47,19 +47,20 @@ a {
 .container {
     font-family: 'Overpass', sans-serif;
     max-width: 23.438rem;
+    border: 2px solid green;
 
     .navbar {
         margin-top: 1.55rem;       
         display: flex;
         justify-content: space-between;
         position: relative;
-
+        color: $white;
+        
         .content {            
             position: absolute;
             margin-top: 2.5rem;
             top: 50%;
-
-           
+            
             width: 19.688rem;
             background-color: $white; 
 
@@ -107,23 +108,13 @@ a {
                   
                 }
 
-                .a-menu {
-                    display: none;
-                }
-
-                .b-menu {
-                    display: none;
-                }
-
-                .c-menu {
-                    display: none;                    
-                }
-                color: $white;
+                
                 
             }
 
             .authentication {                
-                margin-top: 2.5rem; 
+                margin-top: 2.5rem;
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -310,47 +301,107 @@ a {
     
 }
 
-.footer-content {
-    margin-top: 3.85rem;
-    width: 23.438rem;
-    background-color: $vd-black-blue;
-    border-radius: 0 6.25rem 0 0;
 
-    .logo {
-        text-align: center;
-        margin: 4rem;
-    }
-    
-    .footer-list {
 
-        text-align: center;
-        .items {
+// Desktop responsivity
+@media (min-width:940px) {
+    .container {
 
-            margin: 1.5rem 0;
+    max-width: 90rem;
 
-           
-            .main-menu {
-                color: $white;
-                font-weight: 600;
-            }
+        .logo {
+            margin-right: 4rem;
+        }
 
-            .sub-menu {
+        .navbar {
+            display: flex;            
+            align-items: center;
 
-                margin: 2rem 0;
-                li {
-                    margin-top: .5rem;                    
-                    a {
-                        color: $white;
-                        opacity: .8;                        
-                    }  
+            .content {            
+                position: static;
+                margin: 0;
+                width: 100%;
+                background-color: transparent;
+
+                display: flex;
+                flex-direction: row;
+
+                .items {
+                    margin: 0;
+                    margin-right: 5rem;
+                    position: relative;
                     
-                    a:hover {
-                        opacity: 1;
+                    .main-menu {                    
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        color: $white;
+
+                        .arrows {
+                            width: 10px;
+                            height: 10px;
+                            background-color: #1f3f5b;                           
+                        }
+                        
+                    }
+
+                    .sub-menu {
+                        display: none;
+                        position: absolute;
+                        width: 150px;
+                        right: -30%;
+                        padding: 1.2rem;                        
+                        border-radius: 10px;
+                        background-color: $white;
                     }
                     
                 }
+
+                .items:hover {
+                    .sub-menu {
+                        display: block;
+                    }
+                }
+
+                .authentication {                    
+                    flex-direction: row;
+                    margin: 0;
+                    margin-left: auto;
+
+                    a {                                        
+                        padding: 1rem;
+                        color: $white;
+                    }
+    
+                    .login:hover {
+
+                        a {
+                            color: $light-red;
+                        }
+    
+                        background: $white;
+                    }
+    
+                    .sign-up:hover {
+                        a {
+                            color: $light-red;
+                        }
+    
+                        background: $white;
+                        
+                    }
+                }
+                            
             }
+
+            button {
+                display: none;
+            }
+
         }
+
+        .title {
+            width: 100%;
+        }
+
     }
 }
-
