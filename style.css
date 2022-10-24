@@ -6,19 +6,7 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-family: 'Overpass', sans-serif;
 }
 
 ul {
@@ -30,9 +18,8 @@ a {
 }
 
 .container {
-  font-family: 'Overpass', sans-serif;
+  margin: 0 auto;
   max-width: 23.438rem;
-  border: 2px solid green;
 }
 
 .container .navbar {
@@ -316,8 +303,41 @@ a {
   width: 100%;
 }
 
+.footer-content {
+  background-color: #25252d;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 0  6.25rem 0 0;
+}
+
+.footer-content .logo {
+  margin: 3rem 0 0 0;
+}
+
+.footer-content .nav-title {
+  margin: 2rem 0 2rem 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-content .sub-title a {
+  opacity: .7;
+  line-height: 2rem;
+  color: #fff;
+}
+
+.footer-content .sub-title a:hover {
+  opacity: .9;
+  text-decoration: underline;
+}
+
+.footer-content .last-title {
+  margin-bottom: 2rem;
+}
+
 @media (min-width: 940px) {
   .container {
+    margin: 0 auto;
     max-width: 90rem;
   }
   .container .logo {
@@ -400,6 +420,18 @@ a {
   }
   .container .title {
     width: 100%;
+  }
+  .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 15rem;
+    padding-bottom: 5rem;
+  }
+  .footer-content ul {
+    margin-top: 1.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
