@@ -353,7 +353,7 @@ a {
 }
 
 // Desktop responsivity
-@media (min-width:1040px) {
+@media (min-width:1075px) {
     .container {
         margin: 0 auto;
         max-width: 90rem;
@@ -460,8 +460,7 @@ a {
             display: none;
         }
 
-        .top-pub {
-            
+        .top-pub {            
             display: flex;
             justify-content: space-between;
 
@@ -469,14 +468,13 @@ a {
             position: relative;
            
             .left-side {
-                
-                
-                
+                padding-left: 5rem;
                 display: flex;
                 flex-direction: column;
                 width: 100%;
 
                 .div-1 {
+                   
                     margin-top: 2rem;
                     margin-bottom: 2rem;                    
                 }
