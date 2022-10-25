@@ -228,19 +228,23 @@ a {
   padding: 1.25rem;
 }
 
+.main-content .top-pub .right-side {
+  display: none;
+}
+
+.main-content .top-pub .right-side img {
+  display: none;
+}
+
 .main-content .normal {
   margin-top: 3.6rem;
 }
 
-.main-content .normal .first-section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1f3f5b;
-  margin-bottom: 6rem;
+.main-content .normal .mobile-image {
+  width: 100%;
 }
 
-.main-content .normal .left-info div {
+.main-content .normal .left-side div {
   margin-bottom: 5rem;
 }
 
@@ -335,7 +339,7 @@ a {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 1045px) {
+@media (min-width: 1040px) {
   .container {
     margin: 0 auto;
     max-width: 90rem;
@@ -421,10 +425,19 @@ a {
   .container .title {
     width: 100%;
   }
+  .main-content .mobile-image {
+    display: none;
+  }
   .main-content .top-pub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: relative;
   }
-  .main-content .top-pub .left-info {
+  .main-content .top-pub .left-side {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -432,26 +445,35 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    max-width: 520px;
+    width: 100%;
   }
-  .main-content .top-pub .left-info h2 {
+  .main-content .top-pub .left-side .div-1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .main-content .top-pub .left-side h2 {
     padding: 0;
     margin-bottom: 2rem;
     text-align: left;
   }
-  .main-content .top-pub .left-info p {
+  .main-content .top-pub .left-side p {
     text-align: left;
   }
-  .main-content .top-pub .editor-image {
-    background: url(./images/illustration-editor-desktop.svg) no-repeat center center/cover;
+  .main-content .top-pub .right-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  .main-content .top-pub .right-side img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: absolute;
-    top: -200px;
-    right: -350px;
-    width: 900px;
-    height: 900px;
+    top: -30%;
+    right: -200px;
+    width: 720px;
   }
   .main-content .abnormal {
     background-position-x: -150%;

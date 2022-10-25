@@ -231,18 +231,23 @@ a {
 .main-content {
     padding: 1.25rem;
     
+    .top-pub {
+        .right-side {
+            display: none;
+            img {
+                display: none;
+            }
+        }
+    }
+
     .normal {
         margin-top: 3.6rem;
 
-        .first-section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color:$v-dark-blue;
-            margin-bottom: 6rem;
+        .mobile-image {
+            width: 100%;
         }
        
-        .left-info {
+        .left-side {
             div {
                 margin-bottom: 5rem;
             }
@@ -348,7 +353,7 @@ a {
 }
 
 // Desktop responsivity
-@media (min-width:1045px) {
+@media (min-width:1040px) {
     .container {
         margin: 0 auto;
         max-width: 90rem;
@@ -450,14 +455,31 @@ a {
     }
 
     .main-content {
+
+        .mobile-image {
+            display: none;
+        }
+
         .top-pub {
+            
+            display: flex;
+            justify-content: space-between;
+
+
             position: relative;
            
-            .left-info {
+            .left-side {
+                
+                
+                
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
-                max-width: 520px;
+                width: 100%;
+
+                .div-1 {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;                    
+                }
 
                 h2 {
                     padding: 0;
@@ -471,14 +493,24 @@ a {
                 
             }
 
-            .editor-image {
-                background: url(./images/illustration-editor-desktop.svg) no-repeat center center/cover;
-                position: absolute;
-                top: -200px;
-                right: -350px;
-                width: 900px;
-                height: 900px;
+            .right-side {
+                
+                display: flex;
+                width: 100%;
+                position: relative;
+
+                img {
+                    
+                    display: flex;
+                    position: absolute;
+
+                    top: -30%;
+                    right: -200px;
+                    width: 720px;
+                    
+                }
             }
+            
         }
 
         .abnormal {
