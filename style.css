@@ -244,6 +244,14 @@ a {
   width: 100%;
 }
 
+.main-content .normal .right-image-m img {
+  width: 100%;
+}
+
+.main-content .normal .right-image-d {
+  display: none;
+}
+
 .main-content .normal .left-side div {
   margin-bottom: 5rem;
 }
@@ -311,7 +319,7 @@ a {
   padding: 1rem 2rem;
   text-align: center;
   border-radius: 0  6.25rem 0 0;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .footer-content .logo {
@@ -480,14 +488,77 @@ a {
     background-position-x: -150%;
     background-position-y: 90%;
     background-size: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .main-content .abnormal .phones {
-    border: 1px solid green;
-    background-position-x: 30px;
-    background-position-y: 4px;
-    background-size: 100%;
-    width: 550px;
-    height: 500px;
+    width: 500px;
+    top: -10%;
+    left: 0;
+  }
+  .main-content .abnormal .empty-div {
+    width: 50%;
+    height: 100px;
+  }
+  .main-content .abnormal .right-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    z-index: 0;
+  }
+  .main-content .abnormal .right-info h2 {
+    padding-left: 0;
+    text-align: left;
+  }
+  .main-content .abnormal .right-info p {
+    text-align: left;
+  }
+  .main-content .third-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 10rem;
+  }
+  .main-content .third-section .left-info {
+    margin: 2rem 0;
+    padding: 2rem;
+    width: 50%;
+  }
+  .main-content .third-section .left-info div h2 {
+    margin-top: 1rem;
+    padding: 0;
+    text-align: start;
+  }
+  .main-content .third-section .left-info div p {
+    text-align: start;
+  }
+  .main-content .third-section .empty-div {
+    width: 50%;
+    height: 720px;
+    position: relative;
+  }
+  .main-content .third-section .empty-div .right-image-d {
+    display: block;
+    position: absolute;
+    left: -43%;
+  }
+  .main-content .third-section .empty-div .right-image-d img {
+    width: 100%;
+  }
+  .main-content .third-section .right-image-m {
+    display: none;
   }
   .footer-content {
     display: -webkit-box;
@@ -495,7 +566,7 @@ a {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-top: 15rem;
+    margin-top: 10rem;
     padding-bottom: 5rem;
   }
   .footer-content ul {
