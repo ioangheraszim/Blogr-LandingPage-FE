@@ -61,7 +61,7 @@ a {
             width: 19.688rem;
             background-color: $white; 
 
-            display: none;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -72,17 +72,26 @@ a {
             }
             
             .items {
-                
                 margin-top: 2rem;
 
-                .main-menu {                    
+                .main-menu {         
+                    display: flex;           
                     font-size: 1.1rem;
                     font-weight: 600;
                     color: $vd-black-blue;
+                    align-items: center;
+
+                    .arrows {
+                        margin-left: .5rem;              
+                        width: 10px;
+                        height: 10px;
+                        background: url(./images/icon-arrow-dark.svg) no-repeat center center /cover;                           
+                    }
+                    
                 }
 
                 .sub-menu {        
-                    display: flex;
+                    display: none;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
@@ -99,15 +108,32 @@ a {
                     }
 
                     a:hover {
-                        transition: ease-in-out 300ms;
+                        color: $vd-black-blue;
+                        opacity: 1;
                         font-weight: 600;
+                        text-decoration: underline;
                     }
                   
                 }
 
                 
-                
             }
+
+            .items:hover {
+                text-decoration: underline;                    
+                .arrows {
+                    transform: rotate(-180deg);
+                    transition: ease-in-out .3s;
+                }
+
+                .sub-menu {
+                    display: flex;
+                    transition: ease-out 300ms;
+                    transform: scaleY(100%)
+                }
+               
+            }
+            
 
             .authentication {                
                 margin-top: 2.5rem;
@@ -376,6 +402,7 @@ a {
         .navbar {
             display: flex;            
             align-items: center;
+            position: sticky;
 
             .content {            
                 position: static;
@@ -391,16 +418,20 @@ a {
                     margin-right: 5rem;
                     position: relative;
                     
-                    .main-menu {                    
+                    .main-menu {  
+                        display: flex;
+                        align-items: center;                  
                         font-size: 1.1rem;
                         font-weight: 600;
                         color: $white;
 
-                        .arrows {
+                        .arrows {     
+                            margin-left: .5rem;                       
                             width: 10px;
                             height: 10px;
-                            background-color: #1f3f5b;                           
+                            background: url(./images/icon-arrow-light.svg) no-repeat center center / cover;                           
                         }
+
                         
                     }
 
@@ -412,15 +443,27 @@ a {
                         padding: 1.2rem;                        
                         border-radius: 10px;
                         background-color: $white;
+                        
                     }
                     
                 }
 
-                .items:hover {
-                    .sub-menu {
-                        display: block;
+                .items:hover {                    
+                    .arrows {
+                        transform: rotate(-180deg);
+                        transition: ease-in-out .3s;
                     }
+
+                    .sub-menu {
+                        display: flex;
+                        transition: ease-out 300ms;
+                        transform: scaleY(100%)
+                    }
+                   
                 }
+
+               
+                
 
                 .authentication {                    
                     flex-direction: row;
@@ -523,31 +566,31 @@ a {
         }
 
         .abnormal {
-            background-position-x: -150%;
+            background-position-x: -240%;
             background-position-y: 90%;
             background-size: 90%;
-            
+            padding: 8rem 1rem 6rem 1rem;
+            border-radius: 0 3rem 0 3rem;
+            margin-top: 15rem;        
             display: flex;
-
-            .phones {
-               width: 500px;
-               top: -10%;
-               left: 0;
-            }
+            
+            
 
             .empty-div {
                 width: 50%;
-                height: 100px;
+                height: 10px;
+
+                .phones {
+                    width: 500px;
+                    top: -10%;
+                    left: 5%;
+                 }
             }
 
             .right-info {
-                
-
                 display: flex;
                 flex-direction: column;                
                 width:50%;
-
-                z-index: 0;
                 
                 h2 {
                     padding-left: 0;

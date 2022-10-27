@@ -40,7 +40,9 @@ a {
   top: 50%;
   width: 19.688rem;
   background-color: #fff;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -63,15 +65,26 @@ a {
 }
 
 .container .navbar .content .items .main-menu {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #25252d;
-}
-
-.container .navbar .content .items .sub-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #25252d;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .navbar .content .items .main-menu .arrows {
+  margin-left: .5rem;
+  width: 10px;
+  height: 10px;
+  background: url(./images/icon-arrow-dark.svg) no-repeat center center/cover;
+}
+
+.container .navbar .content .items .sub-menu {
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -96,9 +109,31 @@ a {
 }
 
 .container .navbar .content .items .sub-menu a:hover {
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  color: #25252d;
+  opacity: 1;
   font-weight: 600;
+  text-decoration: underline;
+}
+
+.container .navbar .content .items:hover {
+  text-decoration: underline;
+}
+
+.container .navbar .content .items:hover .arrows {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.container .navbar .content .items:hover .sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: ease-out 300ms;
+  transition: ease-out 300ms;
+  -webkit-transform: scaleY(100%);
+          transform: scaleY(100%);
 }
 
 .container .navbar .content .authentication {
@@ -362,6 +397,8 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .container .navbar .content {
     position: static;
@@ -382,14 +419,21 @@ a {
     position: relative;
   }
   .container .navbar .content .items .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.1rem;
     font-weight: 600;
     color: #fff;
   }
   .container .navbar .content .items .main-menu .arrows {
+    margin-left: .5rem;
     width: 10px;
     height: 10px;
-    background-color: #1f3f5b;
+    background: url(./images/icon-arrow-light.svg) no-repeat center center/cover;
   }
   .container .navbar .content .items .sub-menu {
     display: none;
@@ -400,8 +444,20 @@ a {
     border-radius: 10px;
     background-color: #fff;
   }
+  .container .navbar .content .items:hover .arrows {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    -webkit-transition: ease-in-out .3s;
+    transition: ease-in-out .3s;
+  }
   .container .navbar .content .items:hover .sub-menu {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: ease-out 300ms;
+    transition: ease-out 300ms;
+    -webkit-transform: scaleY(100%);
+            transform: scaleY(100%);
   }
   .container .navbar .content .authentication {
     -webkit-box-orient: horizontal;
@@ -485,21 +541,24 @@ a {
     width: 720px;
   }
   .main-content .abnormal {
-    background-position-x: -150%;
+    background-position-x: -240%;
     background-position-y: 90%;
     background-size: 90%;
+    padding: 8rem 1rem 6rem 1rem;
+    border-radius: 0 3rem 0 3rem;
+    margin-top: 15rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .main-content .abnormal .phones {
-    width: 500px;
-    top: -10%;
-    left: 0;
-  }
   .main-content .abnormal .empty-div {
     width: 50%;
-    height: 100px;
+    height: 10px;
+  }
+  .main-content .abnormal .empty-div .phones {
+    width: 500px;
+    top: -10%;
+    left: 5%;
   }
   .main-content .abnormal .right-info {
     display: -webkit-box;
@@ -510,7 +569,6 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 50%;
-    z-index: 0;
   }
   .main-content .abnormal .right-info h2 {
     padding-left: 0;
