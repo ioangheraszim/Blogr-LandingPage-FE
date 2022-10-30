@@ -35,6 +35,8 @@ a {
 }
 
 .container .navbar .content {
+  -webkit-box-shadow: -1px 1px 18px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: -1px 1px 18px 0px rgba(0, 0, 0, 0.4);
   position: absolute;
   margin-top: 2.5rem;
   top: 50%;
@@ -54,6 +56,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  overflow: hidden;
 }
 
 .container .navbar .content .arrow-icon {
@@ -139,7 +146,7 @@ a {
   display: flex;
   -webkit-transition: 300ms;
   transition: 300ms;
-  height: 200px;
+  height: auto;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -200,10 +207,22 @@ a {
 }
 
 .container .navbar .content.active {
-  height: 300px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
-.container button {
+.container .hamburger-menu {
+  display: block;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.container .closing-menu {
+  display: none;
   cursor: pointer;
   background: none;
   outline: none;
@@ -213,8 +232,10 @@ a {
 .header {
   padding: 1rem 2rem;
   border-radius: 0 0 0 6.25rem;
-  background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
-  background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, linear-gradient(#ff8f70, #ff3d54);
+  background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center, linear-gradient(90deg, #ff8f70, #ff3d54);
+  background-position-x: 35%;
+  background-position-y: 32%;
 }
 
 .header .title {
@@ -240,6 +261,9 @@ a {
 }
 
 .header .title .button-area .start-free {
+  cursor: pointer;
+  border: none;
+  outline: none;
   margin-right: 1rem;
   background-color: #fff;
   color: #ff3d54;
@@ -256,6 +280,9 @@ a {
 }
 
 .header .title .button-area .learn-more {
+  cursor: pointer;
+  border: none;
+  outline: none;
   background-color: transparent;
   outline: 1px solid #fff;
   color: #fff;
@@ -413,6 +440,11 @@ a {
     position: sticky;
   }
   .container .navbar .content {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    overflow: visible;
     position: static;
     margin: 0;
     width: 100%;
@@ -448,13 +480,16 @@ a {
     background: url(./images/icon-arrow-light.svg) no-repeat center center/cover;
   }
   .container .navbar .content .items .sub-menu {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
     width: 150px;
-    height: 0px;
-    overflow: hidden;
     right: -30%;
     padding: 0;
     border-radius: 10px;
@@ -467,10 +502,13 @@ a {
     transition: ease-in-out .3s;
   }
   .container .navbar .content .items.active .sub-menu {
+    padding: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 200px;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    height: auto;
     -webkit-transition: 300ms;
     transition: 300ms;
   }
@@ -503,6 +541,14 @@ a {
   }
   .container .title {
     width: 100%;
+  }
+  .container .hamburger-menu, .container .closing-menu {
+    display: none;
+  }
+  .header {
+    background-size: 200%;
+    background-position-y: 50%;
+    background-position-x: 20%;
   }
   .main-content .mobile-image {
     display: none;

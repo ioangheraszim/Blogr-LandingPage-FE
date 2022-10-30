@@ -45,6 +45,7 @@ a {
     
     margin: 0 auto;
     max-width: 23.438rem;
+    
 
     .navbar {
         margin-top: 1.55rem;       
@@ -53,7 +54,8 @@ a {
         position: relative;
         color: $white;
         
-        .content {            
+        .content {   
+            box-shadow: -1px 1px 18px 0px rgba(0,0,0,0.40);         
             position: absolute;
             margin-top: 2.5rem;
             top: 50%;
@@ -67,12 +69,16 @@ a {
             align-items: center;
             border-radius: 10px;
 
+            transform: scaleY(0);
+            transform-origin: top;
+            overflow: hidden;
+
             .arrow-icon {
                 margin-left: .5rem;
             }
             
             .items {
-                margin-top: 2rem;
+                margin-top: 2rem;                
 
                 .main-menu {         
                     display: flex;           
@@ -127,7 +133,8 @@ a {
 
             .items.active {
                 text-decoration: underline;   
-                transition: 300ms;                 
+                transition: 300ms; 
+
                 .arrows {
                     transform: rotate(-180deg);
                     transition: ease-in-out .3s;
@@ -136,7 +143,7 @@ a {
                 .sub-menu {
                     display: flex;
                     transition: 300ms;    
-                    height: 200px;
+                    height: auto;
                     overflow: hidden;      
                     border-radius: 10px;
                 }
@@ -194,12 +201,22 @@ a {
         }
 
         .content.active {
-            height: 300px;
+            transition: 300ms;
+            transform: scaleY(1);
         }
 
     }   
 
-    button {
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        background: none;
+        outline: none;
+        border: none;
+    }
+
+    .closing-menu {
+        display: none;
         cursor: pointer;
         background: none;
         outline: none;
@@ -211,8 +228,9 @@ a {
 .header {
     padding: 1rem 2rem;
     border-radius: 0 0 0 6.25rem;
-    background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center , linear-gradient($v-light-red, $light-red);    
-
+    background: url(./images/bg-pattern-intro-mobile.svg) no-repeat center , linear-gradient(90deg, $v-light-red, $light-red);    
+    background-position-x: 35%;
+    background-position-y: 32%;
     .title {
         margin-top: 8rem;
         text-align: center;
@@ -234,6 +252,9 @@ a {
             margin-bottom: 6.5rem;            
 
             .start-free {
+                cursor: pointer;
+                border: none;
+                outline: none;
                 margin-right: 1rem;                        
                 background-color: $white;
                 color: $light-red;
@@ -242,6 +263,7 @@ a {
             }
 
             .start-free:hover {
+                
                 background-color: transparent;
                 color: $white;
                 outline: 1px solid $white;
@@ -249,6 +271,9 @@ a {
             }
     
             .learn-more {
+                cursor: pointer;
+                border: none;
+                outline: none;
                 background-color: transparent;
                 outline: 1px solid $white;
                 color: $white;
@@ -418,10 +443,15 @@ a {
             align-items: center;
             position: sticky;
 
-            .content {            
+            .content {
+                transform: scaleY(1);
+                box-shadow: none;
+                overflow: visible;
+
+                            
                 position: static;
                 margin: 0;
-                width: 100%;
+                width: 100%;                
                 background-color: transparent;
 
                 display: flex;
@@ -450,11 +480,14 @@ a {
                     }
 
                     .sub-menu {
+
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        overflow: hidden;
+
                         display: flex;
                         position: absolute;
                         width: 150px;
-                        height: 0px;
-                        overflow: hidden;
                         right: -30%;
                         padding: 0;                        
                         border-radius: 10px;
@@ -471,15 +504,14 @@ a {
                     }
 
                     .sub-menu {
+                        padding: 1rem;
                         display: flex;
-                        height: 200px;
+                        transform: scaleY(1);
+                        height: auto;
                         transition: 300ms;
                     }
                    
-                }
-
-               
-                
+                } 
 
                 .authentication {                    
                     flex-direction: row;
@@ -517,13 +549,21 @@ a {
             }
 
         }
-
+        
         .title {
             width: 100%;
         }
 
-    }
+        .hamburger-menu, .closing-menu {
+            display: none;
+        }
 
+    }
+    .header {
+        background-size: 200%;
+        background-position-y: 50%;
+        background-position-x: 20%;
+    }
     .main-content {
 
         .mobile-image {
